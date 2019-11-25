@@ -1,0 +1,1 @@
+2019/11/25 12:29:24 [error] 6#6: *1 connect() failed (111: Connection refused) while connecting to upstream, client: 66.96.206.193, server: 0.0.0.0, request: "GET / HTTP/1.1", upstream: "http://172.20.0.3:8003/", host: "207.148.124.110:8003"

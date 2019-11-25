@@ -1,0 +1,33 @@
+version: "3.7"
+
+services:
+  nginx:
+    restart: always
+    build:
+      context: "./nginx"
+    networks:
+      - gate-tier
+    volumes:
+      - ./nginx/conf.d/:/etc/nginx/conf.d/
+      - ./nginx:/var/log/nginx/
+    ports:
+      - "8003:8003"
+      - "8004:8080"
+      # - "1235:1235"
+
+
+  react:
+    restart: always
+    volumes:
+      - ./react/:/root/react/
+    build:
+      context: "./react"
+    networks:
+      - gate-tier
+    command: "npm run start:dev"
+
+
+
+networks:
+  gate-tier:
+  # back-tier:
