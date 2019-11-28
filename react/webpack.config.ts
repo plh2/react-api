@@ -3,7 +3,7 @@ import path from 'path';
 import webpack from 'webpack';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 
-const config: webpack.Configuration = {
+export default {
   mode: 'development',
   entry: './src/index.tsx',
   output: {
@@ -11,14 +11,6 @@ const config: webpack.Configuration = {
     path: path.resolve(__dirname, 'dist'),
   },
   devtool: 'inline-source-map',
-  devServer: {
-    contentBase: path.join(__dirname, 'dist'),
-    // compress: true,
-    port: 80,
-    host: "0.0.0.0",
-    // http2: true,
-    hot: true,
-  },
   // externals: {
   //   "react": "React",
   //   "react-dom": "ReactDOM"
@@ -66,8 +58,5 @@ const config: webpack.Configuration = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
     })
-    // new VueLoaderPlugin()
   ]
-};
-
-export default config;
+} as webpack.Configuration;

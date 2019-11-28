@@ -8,8 +8,7 @@
     "frontend"
   ],
   "scripts": {
-    "start:dev": "webpack-dev-server --color",
-    "dev": "webpack --watch"
+    "dev": "ts-node server.ts -w -p"
   },
   "devDependencies": {
     "@types/html-webpack-plugin": "^3.2.1",
@@ -23,6 +22,7 @@
     "html-webpack-plugin": "^3.2.0",
     "jsxobj": "^1.1.0",
     "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "source-map-loader": "^0.2.4",
     "ts-loader": "^6.2.1",
     "ts-node": "^8.5.2",
@@ -33,6 +33,7 @@
     "webpack-dev-server": "^3.9.0"
   },
   "dependencies": {
-    "react-dom": "^16.12.0"
+    "@types/webpack-dev-middleware": "^2.0.3",
+    "webpack-dev-middleware": "^3.7.2"
   }
 }
