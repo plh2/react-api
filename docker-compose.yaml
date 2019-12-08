@@ -26,7 +26,7 @@ services:
       - PORT=8003
     networks:
       - gate-tier
-    command: "npm run start:dev"
+    command: "npm run dev"
 
 
 
