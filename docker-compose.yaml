@@ -18,8 +18,8 @@ services:
 
   react:
     restart: always
-    volumes:
-      - ./react/:/root/react/
+    # volumes:
+    #   - ./react/:/root/react/
     build:
       context: "./react"
     environment:
