@@ -6,6 +6,6 @@ WORKDIR /root/react
 
 # RUN npm config set user 0
 
-RUN npx 
+# RUN npx 
 RUN npx yarn
 
